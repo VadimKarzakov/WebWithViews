@@ -49,21 +49,6 @@ public  class BrandDto {
         this.name = name;
     }
 
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    public Date getModified() {
-        return modified;
-    }
-
-    public void setModified(Date modified) {
-        this.modified = modified;
-    }
 
     public UUID id() {
         return id;
@@ -71,14 +56,6 @@ public  class BrandDto {
 
     public String name() {
         return name;
-    }
-
-    public Date created() {
-        return created;
-    }
-
-    public Date modified() {
-        return modified;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.springdatabasicdemo.controllers;
+package com.example.springdatabasicdemo.web;
 
 import com.example.springdatabasicdemo.dtos.BrandDto;
 import com.example.springdatabasicdemo.exeptions.BrandNotFoundExeption;
@@ -13,8 +13,14 @@ import java.util.UUID;
 @RequestMapping("/brands")
 public class BrandController {
 
-    @Autowired
+
     private BrandService brandService;
+
+    @Autowired
+    public void setBrandService(BrandService brandService){
+
+        this.brandService=brandService;
+    }
 
     @GetMapping()
     Iterable<BrandDto> all() {//указывает на обработку HTTP-запроса GET
@@ -33,4 +39,3 @@ public class BrandController {
         return brandService.create(brand);
     }//обрабатывает HTTP-запрос POST с телом запроса в формате JSON
 }
-//обрабатывает HTTP-запросы

@@ -13,7 +13,6 @@ public class Offer extends BaseEntity {
     private String description;
     @Column(name = "engine")
     private Engine engine;
-    @Enumerated(value = EnumType.ORDINAL)
     @Column(name = "image_url")
     private String imageUrl;
     @Column(name = "mileage")

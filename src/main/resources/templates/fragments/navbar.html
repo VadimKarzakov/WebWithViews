@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="https://avatars.mds.yandex.net/i?id=5b2db6ec611f6c9d1e3610af88f6a7ae2244b18d-8972142-images-thumbs&n=13" alt="Ваш логотип" width="30" height="30" class="d-inline-block align-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-item nav-link text-dark" href="/">Начало</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link text-dark" href="/companies/add">Машина</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link text-dark" href="/employees/add">Модели</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link text-dark" href="/companies/all">Все машины</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <!-- Add authentication logic here -->
+                <li class="nav-item">
+                    <a class="nav-item nav-link text-dark" id="loginLink" href="/login">Войти</a>
+                </li>
+                <!-- Add authentication logic here -->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Add your authentication logic here
+    // For example, you might have a variable isAuthenticated that indicates whether the user is authenticated
+    // You can update the login/logout link based on this variable
+
+    // Example using plain JavaScript:
+    var isAuthenticated = false; // Replace with your actual authentication logic
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var loginLink = document.getElementById("loginLink");
+
+        if (isAuthenticated) {
+            loginLink.innerHTML = "Выйти"; // Change text to "Logout" or appropriate text
+            loginLink.href = "/logout"; // Update href to the logout URL
+        } else {
+            loginLink.innerHTML = "Войти";
+            loginLink.href = "/login";
+        }
+    });
+</script>
